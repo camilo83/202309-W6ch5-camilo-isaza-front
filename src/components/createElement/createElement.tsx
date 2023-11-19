@@ -1,16 +1,16 @@
-import { SyntheticEvent, useRef } from 'react';
-import { useElements } from '../../hooks/useElements';
-import { Element } from '../../model/element';
+import { /* SyntheticEvent, */ useRef } from 'react';
+/* import { useElements } from '../../hooks/useElements';
+import { Element } from '../../model/element'; */
 
 export function CreateElement() {
-  const { addElement } = useElements();
+  /*   const { addElement } = useElements(); */
 
   const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (event: SyntheticEvent) => {
+  /*   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
-
-    const form = formRef.current;
+ */
+  /*   const form = formRef.current;
     if (!form) return;
 
     const formData = new FormData(form);
@@ -45,7 +45,7 @@ export function CreateElement() {
 
     addElement(newElement);
     form.reset();
-  };
+  }; */
 
   return (
     <>
@@ -55,7 +55,11 @@ export function CreateElement() {
         </div>
 
         <div className="element-form">
-          <form ref={formRef} action="" name="form" onSubmit={handleSubmit}>
+          <form
+            ref={formRef}
+            action=""
+            name="form" /* onSubmit={handleSubmit} */
+          >
             <div>
               <label htmlFor="element-name">Name</label>
               <input type="text" name="name" required />

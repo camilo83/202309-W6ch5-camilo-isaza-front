@@ -9,7 +9,7 @@ La API REST debe tener los siguientes endpoints:
 
 [GET] /things/:idThing -> devuelve una cosa que ya sé
 
-[DELETE] /things/:idThing -> borra una cosa que ya sé
+[DELETE] /things/:idThing -> borra una cosa que ya sée
 
 [POST] /things -> crea una cosa que ya sé (la recibe en el body)
 
