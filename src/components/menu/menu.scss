@@ -1,0 +1,16 @@
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      display: block;
+      padding: 0.2rem 0.5rem;
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-family: 'Quantico', sans-serif;
+        font-weight: 700;
+      }
+    }
+  }
+}

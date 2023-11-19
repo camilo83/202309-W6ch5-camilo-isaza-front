@@ -1,0 +1,35 @@
+.arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .left-arrow,
+  .right-arrow {
+    width: 8rem;
+    background-color: transparent;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+  .left-arrow {
+    transform: rotate(0deg);
+  }
+
+  .left-arrow:hover {
+    cursor: pointer;
+    transform: rotate(0deg) scale(1);
+  }
+
+  .left-arrow:active {
+    transform: rotate(0deg) scale(0.9);
+  }
+
+  .right-arrow {
+    transform: rotate(180deg);
+  }
+
+  .right-arrow:hover {
+    cursor: pointer;
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,43 @@
+.details {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  margin-block: 2rem;
+  .images {
+    display: flex;
+    flex-direction: column;
+    p {
+      font-size: 5rem;
+      margin-block: 0;
+    }
+    img {
+      width: 20rem;
+    }
+  }
+  .info {
+    font-size: 1rem;
+    font-family: 'Quantico', sans-serif;
+    font-weight: normal;
+  }
+}
+.change-element {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  align-items: center;
+  .previous-next-element,
+  .edit-delete {
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: lightblue;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
