@@ -1,4 +1,4 @@
-# Week 6 Weekend
+# Week 6 Weekend Ch
 
 API REST Things I already know / Lo que queráis
 Crea una API REST que se conecte a un fichero JSON, para manipular recursos de tipo cosas que ya sé. El JSON tendrá una sola propiedad de tipo array, donde almacenarán objetos que representarán cosas que hemos aprendido en el bootcamp.
