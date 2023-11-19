@@ -1,0 +1,21 @@
+.footer-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  background-color: bisque;
+
+  .header-address {
+    address {
+      font-size: 2rem;
+    }
+
+    img {
+      height: 3rem;
+    }
+  }
+  .about-us {
+    font-size: 1.2rem;
+    margin-block-end: 0.3rem;
+  }
+}
