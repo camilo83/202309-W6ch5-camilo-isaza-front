@@ -9,15 +9,23 @@ export function List() {
   const { loadElements, elements, page } = useElements();
 
   useEffect(() => {
+    console.log('useEffect is running');
     loadElements();
   }, [loadElements]);
+
+  console.log(elements);
+  console.log(page);
   return (
     <>
+      {console.log(elements)}
+      {console.log(typeof elements)}
       <Page></Page>
       <ul className="elements-list">
-        {elements.slice((page - 1) * 18, page * 18).map((item: Element) => (
-          <Card element={item} key={item.id} />
-        ))}
+        {Array.isArray(elements) &&
+          elements.slice((page - 1) * 18, page * 18).map((item: Element) => {
+            console.log('Mapping Item:', item);
+            return <Card element={item} key={item.id} />;
+          })}
       </ul>
     </>
   );

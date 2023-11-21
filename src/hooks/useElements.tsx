@@ -19,14 +19,16 @@ export function useElements() {
   const repo = useMemo(() => new Repo(), []);
 
   const loadElements = useCallback(async () => {
+    console.log('Page in useElements:', page);
     try {
       dispatch(loadElementsThunk(repo));
+      console.log('Elements in useElements:', elements);
     } catch (error) {
       console.log((error as Error).message);
     }
   }, [repo]);
 
-  const addElement = async (element: Partial<Element> & { id: number }) => {
+  const addElement = async (element: Partial<Element> & { id: string }) => {
     try {
       dispatch(
         createElementThunk({
@@ -41,12 +43,12 @@ export function useElements() {
 
   const updateElement = async (
     id: Element['id'],
-    element: Partial<Element> & { id: number }
+    element: Partial<Element>
   ) => {
     try {
       dispatch(
         updateElementThunk({
-          id: typeof id === 'string' ? parseInt(id, 10) : id,
+          id,
           repo,
           updatedElement: element,
         })
@@ -60,7 +62,7 @@ export function useElements() {
     try {
       dispatch(
         deleteElementThunk({
-          id: typeof id === 'string' ? parseInt(id, 10) : id,
+          id,
           repo,
         })
       );

@@ -8,7 +8,7 @@ export function App() {
   const menuOptions: MenuOption[] = [
     { label: 'Home', path: '/' },
     { label: 'Elements', path: '/elements' },
-    { label: 'Create element', path: '/elements' },
+    { label: 'Create element', path: '/create' },
   ];
   return (
     <>
