@@ -6,7 +6,7 @@ import { useElements } from '../../hooks/useElements';
 export default function DetailsPage() {
   const { id } = useParams();
   const { elements, deleteElement } = useElements();
-  const element = elements.find((item: Element) => item.id === Number(id));
+  const element = elements.find((item: Element) => item.id === String(id));
 
   const handleDelete = () => {
     if (element?.id) {

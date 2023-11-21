@@ -9,7 +9,7 @@ export type Element = {
   melt: number;
   molar_heat: number;
   named_by: string;
-  id: number;
+  id: string;
   period: number;
   group: number;
   phase: string;
