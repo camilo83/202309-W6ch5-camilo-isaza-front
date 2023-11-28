@@ -6,7 +6,6 @@ type PropsType = {
   element: Element;
 };
 export function Card({ element }: PropsType) {
-  console.log('Element in Card:', element);
   return (
     <>
       <Link to={'/details/' + element.id} style={{ textDecoration: 'none' }}>
