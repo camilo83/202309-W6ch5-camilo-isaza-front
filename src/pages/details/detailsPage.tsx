@@ -10,7 +10,7 @@ export default function DetailsPage() {
 
   const handleDelete = () => {
     if (element?.id) {
-      deleteElement(element.id.toString());
+      deleteElement(element.id);
     }
   };
 

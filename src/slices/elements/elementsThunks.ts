@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { Repo } from '../services/repo';
-import { Element } from '../model/element';
+import { Repo } from '../../services/repoElements';
+import { Element } from '../../model/element';
 
 export const loadElementsThunk = createAsyncThunk<Element[], Repo>(
   'elements/load',

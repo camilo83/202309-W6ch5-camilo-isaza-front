@@ -1,14 +1,14 @@
 import { useCallback, useMemo } from 'react';
-import { Repo } from '../services/repo';
+import { Repo } from '../services/repoElements';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   loadElementsThunk,
   createElementThunk,
   updateElementThunk,
   deleteElementThunk,
-} from '../slices/elementsThunks';
+} from '../slices/elements/elementsThunks';
 import { AppDispatch, RootState } from '../store/store';
-import { setPage } from '../slices/elementsSlice';
+import { setPage } from '../slices/elements/elementsSlice';
 
 export function useElements() {
   const dispatch = useDispatch<AppDispatch>();
@@ -19,10 +19,8 @@ export function useElements() {
   const repo = useMemo(() => new Repo(), []);
 
   const loadElements = useCallback(async () => {
-    console.log('Page in useElements:', page);
     try {
       dispatch(loadElementsThunk(repo));
-      console.log('Elements in useElements:', elements);
     } catch (error) {
       console.log((error as Error).message);
     }

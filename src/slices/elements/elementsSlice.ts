@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { Element } from '../model/element';
+import { Element } from '../../model/element';
 import {
   loadElementsThunk,
   createElementThunk,
@@ -31,14 +31,11 @@ const elementsSlice = createSlice({
       state.elementsStateOption = 'loading';
       return state;
     }),
-      builder.addCase(
-        loadElementsThunk.fulfilled,
-        (state: ElementsState, { payload }: PayloadAction<Element[]>) => {
-          state.elements = payload;
-          state.elementsStateOption = 'idle';
-          return state;
-        }
-      ),
+      builder.addCase(loadElementsThunk.fulfilled, (state, { payload }) => {
+        state.elements = payload;
+        state.elementsStateOption = 'idle';
+        return state;
+      }),
       builder.addCase(loadElementsThunk.rejected, (state: ElementsState) => {
         state.elementsStateOption = 'error';
         return state;
