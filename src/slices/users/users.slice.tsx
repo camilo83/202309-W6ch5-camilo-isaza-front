@@ -26,6 +26,7 @@ const userSlice = createSlice({
     logout: (state: UserState) => {
       state.loggedUser = null;
       state.token = '';
+      console.log('hola');
     },
   },
   extraReducers: (builder) => {

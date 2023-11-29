@@ -3,7 +3,7 @@ import { LoginUser, User } from '../model/user';
 import { LoginResponse } from '../types/login.payload';
 
 export class RepoUsers {
-  url = serverUrl + '/users';
+  url = 'http://localhost:2700/users';
 
   async getUsers(): Promise<User[]> {
     const response = await fetch(this.url);

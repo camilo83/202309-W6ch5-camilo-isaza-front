@@ -1,3 +1,4 @@
+import { ImgData } from '../types/imgData';
 import { User } from './user';
 
 export type Experiment = {
@@ -7,5 +8,5 @@ export type Experiment = {
   year: number;
   materials: string[];
   description: string;
-  videosImages: string[];
+  experimentImage: ImgData;
 };
