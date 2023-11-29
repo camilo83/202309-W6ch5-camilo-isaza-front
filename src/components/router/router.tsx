@@ -13,7 +13,10 @@ const ExperimentsLogin_Register = lazy(
   () => import('../../pages/login_reg_exp/login_reg_exp')
 );
 const ExperimentsLogin = lazy(() => import('../../pages/login_exp/login_exp'));
-const ExperimentsRegister = lazy(() => import('../../pages/reg_exp/login_exp'));
+const ExperimentsRegister = lazy(() => import('../../pages/reg_exp/reg_exp'));
+const ExperimentsForum = lazy(
+  () => import('../../pages/experiments/experimentsPage')
+);
 
 export function Router() {
   return (
@@ -28,16 +31,20 @@ export function Router() {
           <Route path="/create" element={<Create></Create>}></Route>
           <Route path="/scientists" element={<Scientists></Scientists>}></Route>
           <Route
-            path="/Experiments/login-register"
+            path="/experiments/login-register"
             element={<ExperimentsLogin_Register></ExperimentsLogin_Register>}
           ></Route>
           <Route
-            path="/Experiments/login"
+            path="/experiments/login"
             element={<ExperimentsLogin></ExperimentsLogin>}
           ></Route>
           <Route
-            path="/Experiments/register"
+            path="/experiments/register"
             element={<ExperimentsRegister></ExperimentsRegister>}
+          ></Route>
+          <Route
+            path="/experiments/forum"
+            element={<ExperimentsForum></ExperimentsForum>}
           ></Route>
         </Routes>
       </Suspense>
